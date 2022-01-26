@@ -4,7 +4,9 @@ import {
     StyleSheet,
     Text,
     View,
+    TextInput,
 } from 'react-native';
+import colors from '../styles/colors';
 
 export function UserIdentification() {
     return (
@@ -14,6 +16,10 @@ export function UserIdentification() {
                     <Text style={styles.emoji}>
                         😄
                     </Text>
+
+                    <TextInput style={styles.input}>
+
+                    </TextInput>
                 </View>
             </View>
         </SafeAreaView>
@@ -39,5 +45,15 @@ const styles = StyleSheet.create({
     },
     emoji: {
         fontSize: 44
+    },
+    input: {
+        borderBottomWidth: 1,
+        borderColor: colors.gray,
+        color: colors.heading,
+        width: '100%',
+        fontSize: 18,
+        marginTop: 50,
+        padding: 10, 
+        textAlign: 'center'
     }
 })
