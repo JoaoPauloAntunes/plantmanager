@@ -8,9 +8,8 @@ import { Confirmation } from '../pages/Confirmation';
 
 const stackRoutes = createStackNavigator();
 
-const appRoutes: React.FC = () => (
+const AppRoutes: React.FC = () => (
     <stackRoutes.Navigator
-        headerMode="none"
         screenOptions={{
             cardStyle: {
                 backgroundColor: colors.white,
