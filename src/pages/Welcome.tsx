@@ -19,7 +19,7 @@ import { useNavigation } from '@react-navigation/core';
 export function Welcome(){
     const navigation = useNavigation();
 
-    function handleStart() {
+    function handleSubmit() {
         navigation.navigate('UserIdentification');
     }
 
@@ -46,7 +46,7 @@ export function Welcome(){
                 <TouchableOpacity 
                     style={styles.button} 
                     activeOpacity={0.7}
-                    onPress={handleStart}
+                    onPress={handleSubmit}
                 >
                     <Feather
                         name="chevron-right"
