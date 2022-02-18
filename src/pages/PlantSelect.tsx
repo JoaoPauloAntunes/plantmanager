@@ -8,9 +8,9 @@ import {
     StyleSheet,
     FlatList,
 } from 'react-native';
-import { EnviromentButton } from '../PlantCardPrimary.tsx/EnviromentButton';
+import { EnviromentButton } from '../components/EnviromentButton';
 
-import { Header } from '../PlantCardPrimary.tsx/Header';
+import { Header } from '../components/Header';
 import api from '../services/api';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
