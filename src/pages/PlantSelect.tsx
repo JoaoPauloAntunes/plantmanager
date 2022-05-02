@@ -15,6 +15,7 @@ import { useNavigation } from '@react-navigation/core';
 import { Header } from '../components/Header';
 import { PlantCardPrimary } from '../components/PlantCardPrimary';
 import { Load } from '../components/Load';
+import { PlantProps } from '../libs/storage';
 
 import api from '../services/api';
 
@@ -24,19 +25,6 @@ import fonts from '../styles/fonts';
 interface EnvironmentProps {
     key: string;
     title: string;
-}
-
-interface PlantProps {
-    id: string;
-    name: string;
-    about: string;
-    water_tips: string;
-    photo: string;
-    environments: [string];
-    frequency: {
-        times: string;
-        repeat_every: string;
-    }
 }
 
 export function PlantSelect() {
@@ -52,12 +40,9 @@ export function PlantSelect() {
     const navigation = useNavigation();
 
     function handleEnvironmentSelected(environment: string) {
-        console.log("handleEnvironmentSelected");
         setEnvironmentSelected(environment);
 
         if (environment == "all") {
-            console.log('environment == "all"');
-            // console.log(plants);
             return setFilteredPlants(plants);
         }
 
@@ -68,7 +53,6 @@ export function PlantSelect() {
     }
 
     async function fetchPlants() {
-        console.log("fetchPlants");
         const { data } = await api.get(`plants?_sort=name&_order=asc&_page=${page}&_limit=8`);
         
         if (!data) {
