@@ -15,10 +15,7 @@ import { formatDistance } from 'date-fns/esm';
 import { pt } from 'date-fns/locale';
 import fonts from '../styles/fonts';
 import { PlantCardSecondary } from '../components/PlantCardSecondary';
-<<<<<<< HEAD
 import { Load } from '../components/Load';
-=======
->>>>>>> 139ff41cc6b92b6af1f63ac15cac1e72b83781f8
 
 export function MyPlants() {
   const [myPlants, setMyPlants] = useState<PlantProps[]>([]);
@@ -36,12 +33,8 @@ export function MyPlants() {
       );
 
       setNextWatered(
-<<<<<<< HEAD
         `Não esqueça de regar a ${plantsStoraged[0].name} à aproximadamente ${nextTime}.`
-=======
-        `Não esqueça de regar a ${plantsStoraged[0].name} à ${nextTime} horas.`
->>>>>>> 139ff41cc6b92b6af1f63ac15cac1e72b83781f8
-      );
+      )
 
       setMyPlants(plantsStoraged);
       setLoading(false);
@@ -49,13 +42,10 @@ export function MyPlants() {
 
     loadStorageData();
   }, []);
-<<<<<<< HEAD
   
   if (loading) {
     return <Load />
   }
-=======
->>>>>>> 139ff41cc6b92b6af1f63ac15cac1e72b83781f8
 
   return (
     <View
@@ -74,11 +64,7 @@ export function MyPlants() {
       </View>
 
       <View style={styles.plants}>
-<<<<<<< HEAD
         <Text style={styles.plantsTitle}>
-=======
-        <Text>
->>>>>>> 139ff41cc6b92b6af1f63ac15cac1e72b83781f8
           Próximas regadas
         </Text>
         
@@ -96,10 +82,6 @@ export function MyPlants() {
   )
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 139ff41cc6b92b6af1f63ac15cac1e72b83781f8
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -133,11 +115,7 @@ const styles = StyleSheet.create({
   },
   plantsTitle: {
     fontSize: 24,
-<<<<<<< HEAD
     fontFamily: fonts.heading,
-=======
-    fontWeight: fonts.heading,
->>>>>>> 139ff41cc6b92b6af1f63ac15cac1e72b83781f8
     color: colors.heading,
     marginVertical: 20,
   }

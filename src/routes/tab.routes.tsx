@@ -3,10 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import colors from "../styles/colors";
 import { MaterialIcons } from "@expo/vector-icons";
 import { PlantSelect } from "../pages/PlantSelect";
-<<<<<<< HEAD
+
 import { MyPlants } from "../pages/MyPlants";
-=======
->>>>>>> 139ff41cc6b92b6af1f63ac15cac1e72b83781f8
 
 const AppTab = createBottomTabNavigator();
 
@@ -23,17 +21,12 @@ const AuthRoutes = () => {
         }
       }}
     >
-<<<<<<< HEAD
-      <AppTab.Screen
-=======
       <AppTab.Screen 
->>>>>>> 139ff41cc6b92b6af1f63ac15cac1e72b83781f8
         name="Nova Planta"
         component={PlantSelect}
         options={{
           tabBarIcon: (({ size, color }) => (
             <MaterialIcons
-<<<<<<< HEAD
               name="add-circle-outline"
               size={size}
               color={color}
@@ -47,8 +40,6 @@ const AuthRoutes = () => {
         options={{
           tabBarIcon: (({ size, color }) => (
             <MaterialIcons
-=======
->>>>>>> 139ff41cc6b92b6af1f63ac15cac1e72b83781f8
               name="format-list-bulleted"
               size={size}
               color={color}
